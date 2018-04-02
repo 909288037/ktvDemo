@@ -43,40 +43,39 @@
                 <span>more</span>
             </a>
         </div>
-        <div class="slider">
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="./images/2018030810254386424560.jpg" alt="">
-                        <span href="#">环境设施</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/2018030810254386424560.jpg" alt="">
-                        <span>环境设施</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/2018030810254386424560.jpg" alt="">
-                        <span>环境设施</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/2018030810254386424560.jpg" alt="">
-                        <span>环境设施</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./images/2018030810254386424560.jpg" alt="">
-                        <span>环境设施</span>
-                    </a>
-                </li>
-            </ul>
+        <div id=demo style="overflow:hidden; width: 1100px;" align=center>
+            <table border=0 align=center cellpadding=1 cellspacing=1 cellspace=0>
+                <tr>
+                    <td valign=top bgcolor=ffffff id=marquePic1>
+                        <table width='100%' border='0' cellspacing='0'>
+                            <tr>
+                                <td align=center><a href='#'><img src="http://www.baidu.com/img/logo.gif" width=120 height=80
+                                                                  border=0><br><br>01</a></td>
+                                <td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80
+                                                                  border=0><br><br>02</a></td>
+                                <td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80
+                                                                  border=0><br><br>03</a></td>
+                                <td align=center><a href='#'><img src="http://www.baidu.com/img/logo.gif" width=120 height=80
+                                                                  border=0><br><br>04</a></td>
+                                <td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80
+                                                                  border=0><br><br>05</a></td>
+                                <td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80
+                                                                  border=0><br><br>06</a></td>
+                                <td align=center><a href='#'><img src="http://www.baidu.com/img/logo.gif" width=120 height=80
+                                                                  border=0><br><br>07</a></td>
+                                <td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80
+                                                                  border=0><br><br>08</a></td>
+                                <td align=center><a href='#'><img src=http://www.baidu.com/img/logo.gif width=120 height=80
+                                                                  border=0><br><br>09</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td id=marquePic2 valign=top></td>
+                </tr>
+            </table>
         </div>
+
+
     </div>
     <div class="box">
         <!--关于我们-->
@@ -165,6 +164,27 @@
         <p>Copyright © <a href="#"> 成都夜总会预订网</a></p>
     </div>
 </div>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/index.js"></script>
+<script>
+    var speed = 30
+    marquePic2.innerHTML = marquePic1.innerHTML
 
+    function Marquee() {
+        if (demo.scrollLeft >= 1060) {
+            demo.scrollLeft = 0
+        } else {
+            demo.scrollLeft++
+        }
+    }
+
+    var MyMar = setInterval(Marquee, speed)
+    demo.onmouseover = function () {
+        clearInterval(MyMar)
+    }
+    demo.onmouseout = function () {
+        MyMar = setInterval(Marquee, speed)
+    }
+</script>
 </body>
 </html>

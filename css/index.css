@@ -74,21 +74,28 @@ body {
   line-height: 24px;
   font-size: 12px;
 }
-.wrap-box .box .slider ul {
+.wrap-box .box .slider {
+  height: 159px;
+  overflow: hidden;
+}
+.wrap-box .box .slider table {
   padding-top: 10px;
   overflow: hidden;
 }
-.wrap-box .box .slider ul li {
+.wrap-box .box .slider table td {
+  margin-top: 10px;
   float: left;
-  margin: 0 34px;
 }
-.wrap-box .box .slider ul li a img {
+.wrap-box .box .slider table td a {
+  float: left;
+}
+.wrap-box .box .slider table td a img {
   width: 148px;
   height: 117px;
   margin: 0 auto;
   border: 2px solid #634511;
 }
-.wrap-box .box .slider ul li a span {
+.wrap-box .box .slider table td a span {
   display: block;
   text-align: center;
   height: 30px;
